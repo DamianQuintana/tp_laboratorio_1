@@ -1,13 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include"Funciones.h"
+#include "Funciones.h"
+
 int main()
 {
     //DECLARACION DE VARIABLES
 
     int menu;
-    double factorize;
-    double factorize2;
+    long factorize;
+    long factorize2;
     double number1=0;
     double number2=0;
     double subtract;
@@ -16,14 +17,14 @@ int main()
     double divide;
 
 
-    while(menu!=5) //Condicion de salida del programa a traves del "switch" del menú
+    while(menu!=5)
     {
         //INTERFAZ DEL MENU A TRAVES DE PRINTF
             printf("|====================================|\n");
             printf("|BIENVENIDO AL MENU DE LA CALCULADORA|\n");
             printf("|====================================|\n\n");
-            printf("1. Solicitar valor de A:%.2lf\n", number1);
-            printf("2. Solicitar valor de B:%.2lf\n", number2);
+            printf("1. Solicitar valor de A:%.2f\n", number1);
+            printf("2. Solicitar valor de B:%.2f\n", number2);
             printf("3. Calcular todas las operaciones\n");
             printf("4. Mostrar todos los resultados\n");
             printf("5. Salir\n");
@@ -43,10 +44,9 @@ int main()
             break;
 
             case 3: //Realizo todas las operaciones aritméticas asignandole a una variable del main los resultados retornados por las funciones
-                    system("CLS");
-                    printf("|================================|\n");
+                    printf("=================================\n");
                     printf(" CALCULANDO TODAS LAS OPERACIONES\n");
-                    printf("|================================|\n\n");
+                    printf("=================================\n");
                     system("PAUSE");
                     system("CLS");
                     subtract = subtraction(number1, number2);
@@ -58,12 +58,13 @@ int main()
             break;
 
             case 4: //Muestro todas las operaciones aritméticas
-                    printf("El resultado de %.2f+%.2lf es: %.2lf\n",number1, number2, add);
+                    printf("El resultado de %.2lf+%.2lf es: %.2lf\n",number1, number2, add);
                     printf("El resultado de %.2lf-%.2lf es: %.2lf\n",number1, number2, subtract);
 
                     if(number2==0) //En caso de la division si el segundo numero es 0 mostramos error
                     {
-                        printf("NO SE PUEDE DIVIDIR POR 0\n");
+                        printf(" No se puede dividir por 0\n");
+
                     }
                     else
                     {
@@ -71,19 +72,18 @@ int main()
                      }
 
                     printf("El resultado de %.2lf*%.2lf es: %.2lf\n",number1, number2, multiply);
-                    printf("El factorial de %.2lf es: %.2lf \nEl factorial de %.2lf es: %.2lf\n", number1, factorize, number2, factorize2);
+                    printf("El factorial de %.2lf es: %li \nEl factorial de %.2lf es: %li\n", number1, factorize, number2, factorize2);
                     system("PAUSE");
                     system("CLS");
             break;
 
-            case 5: // Salgo del programa
-                    printf("|===========|\n");
+            case 5:
+                    printf("=============\n");
                     printf(" HASTA LUEGO\n");
-                    printf("|===========|\n");
-                    system("PAUSE");
+                    printf("=============\n");
             break;
 
-            default :// Default en caso que no se seleccione una de las opciones del menú
+            default :
                     printf("INGRESE UNA OPCION VALIDA!!!\n\n");
                     system("PAUSE");
                     system("CLS");

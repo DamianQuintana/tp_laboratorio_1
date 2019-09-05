@@ -6,7 +6,6 @@ double getNumber()
 {
     double number;
     printf("\nIngrese un numero\n");
-
     while(scanf("%lf", &number)==0) //Validacion que sea un numero, en caso que no se guarde en memoria devuelve un '0' indicando que fallo
     {
         system("PAUSE");
@@ -14,6 +13,7 @@ double getNumber()
         printf("Valor incorrecto, vuelva a ingresar el valor\n\n");
         scanf("%lf", &number);
         fflush(stdin);
+
     }
     system("CLS");
     return number;
@@ -29,7 +29,7 @@ double subtraction(double number1, double number2) //Funcion "substraction"
 
 double sum(double number1, double number2)
 {
-    float add; //Declaramos la variable restar donde vamos a guardar el valor resultante de la operación aritmética
+    double add; //Declaramos la variable restar donde vamos a guardar el valor resultante de la operación aritmética
     add = number1 + number2; //Realizamos la operación aritmética
     return add;//Devolvemos el valor de la operación para verificar que el resultado sea correcto
 
@@ -49,12 +49,12 @@ double division(double number1, double number2)//Funcion "Division"
     return divide;//Devolvemos el valor de la operación para verificar que el resultado sea correcto
 }
 
-double factorial(double number1, double number2) //Funcion "Factorial"
+long factorial(double number1, double number2) //Funcion "Factorial"
 {
-    double factorize=1; //Declaramos la variable factorizar y la inicializamos en 1 para evitar que tome un valor "basura"
-    double factorize2=1;
+    long factorize=1; //Declaramos la variable factorizar y la inicializamos en 1 para evitar que tome un valor "basura"
+    int factorize2=1;
 
-    if(number1==0 ) //En caso de que el numero ingresado sea 0 devolvemos un 1
+    if(number1==0) //En caso de que el numero ingresado sea 0 devolvemos un 1
     {
         factorize=1;
     }
@@ -66,7 +66,7 @@ double factorial(double number1, double number2) //Funcion "Factorial"
         }
     }
 
-    if(number2==0) //En caso de que el numero ingresado sea 0 devolvemos un 1
+    if(number2==0)
     {
         factorize2=1;
     }

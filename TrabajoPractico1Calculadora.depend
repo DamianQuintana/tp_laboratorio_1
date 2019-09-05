@@ -1,13 +1,17 @@
 # depslib dependency file v1.0
-1567631653 source:c:\users\43056\desktop\trabajopractico1calculadora\main.c
+1567560914 source:c:\users\43056\desktop\trabajopractico1calculadora\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1567682442 source:c:\users\se28980\desktop\tp1funcionallapcdellaburoesunamierda\trabajopractico1calculadora\funciones.c
 	<stdio.h>
 	<stdlib.h>
 	"Funciones.h"
 
-1567630098 source:c:\users\43056\desktop\trabajopractico1calculadora\funciones.c
+1567682746 c:\users\se28980\desktop\tp1funcionallapcdellaburoesunamierda\trabajopractico1calculadora\funciones.h
+
+1567682442 source:c:\users\se28980\desktop\tp1funcionallapcdellaburoesunamierda\trabajopractico1calculadora\main.c
 	<stdio.h>
 	<stdlib.h>
 	"Funciones.h"
-
-1567630412 c:\users\43056\desktop\trabajopractico1calculadora\funciones.h
 
